@@ -201,13 +201,14 @@ end
 
 def big_shoe_rebounds
  players_array = []
-  game_hash.each do |loc, team_data|
-    team_data.each do |attribute, data|
-    if attribute == :players
-      players_array << attribute.values
-    end
-    end
-  end
+ game_hash.values_at(:players)
+ # game_hash.each do |loc, team_data|
+  #  team_data.each do |attribute, data|
+   # if attribute == :players
+    #  players_array << attribute.values
+    #end
+    #end
+#  end
   binding.pry
   
 end

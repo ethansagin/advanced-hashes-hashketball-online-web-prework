@@ -163,3 +163,7 @@ def team_colors(name)
   end
 end
 
+def team_names
+  game_hash.fetch(:team_name)
+  binding.pry
+end

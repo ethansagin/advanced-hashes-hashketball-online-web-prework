@@ -174,8 +174,8 @@ end
 def player_numbers(name)
   target_data = []
   if name == "Charlotte Hornets"
-    (game_hash[:away][:players]).fetch(:)
+    target_data << (game_hash[:away][:players]).fetch(:number)
   elsif name == "Brooklyn Nets"
-    (game_hash[:home][:players])
+    target_data << (game_hash[:home][:players]).fetch(:number)
   end
 end

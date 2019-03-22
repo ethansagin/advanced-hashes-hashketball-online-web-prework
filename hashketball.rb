@@ -182,4 +182,5 @@ def player_numbers(name)
       target_data << player_data.fetch(:number)
    end
   end
+  target_data
 end

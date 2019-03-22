@@ -82,7 +82,7 @@ def game_hash
           blocks: 15,
           slam_dunks: 10
         },
-        "Desagna Diop" => {
+        "DeSagna Diop" => {
           number: 2,
           shoe: 14,
           points: 24,
@@ -118,7 +118,7 @@ def game_hash
 end
 
 def num_points_scored(name)
-  target_data = nil
+  target_data = 0
   game_hash.each do |loc, team_data|
     team_data.each do |attribute, data|
     if attribute == :players
@@ -134,7 +134,33 @@ def num_points_scored(name)
     end
     end
   end
-  target_data
-  binding.pry
+  return target_data
 end
 
+def shoe_size(name)
+    game_hash.each do |loc, team_data|
+    team_data.each do |attribute, data|
+    if attribute == :players
+      data.each do |player_name, player_data|
+        if player_name == name
+        player_data.each do |a, b|
+          if a == :shoe
+            return b
+          end
+        end
+      end
+      end
+    end
+    end
+  end
+end
+
+def team_colors(name)
+  game_hash.each do |loc, team_data|
+    team_data.each do |attribute, data|
+     if team_data.include?(name) && attribute == :shoe
+          return data
+      end
+    end
+  end
+end

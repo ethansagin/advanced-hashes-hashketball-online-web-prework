@@ -164,6 +164,8 @@ def team_colors(name)
 end
 
 def team_names
-  game_hash.fetch(:team_name)
+  game_hash.each do |loc, team_data|
+    team_data.fetch(:team_name)
   binding.pry
+  end
 end

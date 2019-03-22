@@ -200,15 +200,14 @@ end
 end
 
 def big_shoe_rebounds
- name_array = []
- shoe_array = []
+ players_array = []
   game_hash.each do |loc, team_data|
     team_data.each do |attribute, data|
     if attribute == :players
-      data.each do |player_name, player_data|
-        name_array << player_name
-        shoe_array << player_data.fetch(:shoe)
-      end
+      players_array << attribute.values
     end
     end
   end
+  binding.pry
+  
+end

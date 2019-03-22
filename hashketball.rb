@@ -174,7 +174,8 @@ end
 def player_numbers(name)
   target_data = []
   if name == "Charlotte Hornets"
-    target_data << (game_hash[:away][:players]).fetch(:number)
+    game_hash[:away][:players].each do |player_name, player_data|
+      target_data << player_data.fetch(:number)
   elsif name == "Brooklyn Nets"
     target_data << (game_hash[:home][:players]).fetch(:number)
   end

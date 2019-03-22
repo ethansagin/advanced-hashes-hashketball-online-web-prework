@@ -171,4 +171,8 @@ def team_names
   target_data
 end
 
-def 
+def player_numbers(name)
+  target_data = []
+  game_hash.each do |loc, team_data|
+    team_data.each do ||
+end

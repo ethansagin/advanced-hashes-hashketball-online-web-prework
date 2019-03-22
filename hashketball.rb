@@ -173,6 +173,9 @@ end
 
 def player_numbers(name)
   target_data = []
-  game_hash.each do |loc, team_data|
-    team_data.each do ||
+  if name == "Charlotte Hornets"
+    (game_hash[:away][:players]).fetch(:)
+  elsif name == "Brooklyn Nets"
+    (game_hash[:home][:players])
+  end
 end

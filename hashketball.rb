@@ -166,4 +166,6 @@ def team_colors(name)
 end
 
 def team_names
-  game_hash.
+  game_hash.fetch(:team_name)
+  binding.pry
+end

@@ -212,4 +212,3 @@ def big_shoe_rebounds
     end
     end
   end
-  (shoe_array.max).index

@@ -185,3 +185,5 @@ def player_numbers(name)
   target_data
 end
 
+def player_stats(name)
+  
